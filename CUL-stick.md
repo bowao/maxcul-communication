@@ -32,18 +32,18 @@ ________________________________________________________________________________
 Convert hex to bin
 
 	20 = 00100000
-		 ||||||||
-		 |||||||+---------------- Report known messages (parity & checksum ok), with type prefix.
-		 ||||||+----------------- Report each of the (repeated) packets of a message
-		 |||||+------------------ Report detailed data, even with wrong parity / checksum.
-		 ||||+------------------- Monitor mode: output an r on a risings edge and 'f' on a falling edge. 
-		 ||||                     Output a '.' at the end of the message (no signal for 4msec).
-		 |||+-------------------- Timing: in monitor mode output one additional byte of the internal 
-		 |||                      microsecond timer, divided by 16. This is binary!
-		 ||+--------------------- RSSI: report RSSI value as an additional HEX byte after digested data 
-		 ||                       or as a separate byte if Bit 3 is set too. (Decoding see below)
-		 |+---------------------- Report FHT protocol messages (ack, etc)
-		 +----------------------- CUL/CUN: Report raw RSSI data (a==weak ... p==strong signal)
+	     ||||||||
+	     |||||||+---------------- Report known messages (parity & checksum ok), with type prefix.
+	     ||||||+----------------- Report each of the (repeated) packets of a message
+	     |||||+------------------ Report detailed data, even with wrong parity / checksum.
+	     ||||+------------------- Monitor mode: output an r on a risings edge and 'f' on a falling edge. 
+	     ||||                     Output a '.' at the end of the message (no signal for 4msec).
+	     |||+-------------------- Timing: in monitor mode output one additional byte of the internal 
+	     |||                      microsecond timer, divided by 16. This is binary!
+	     ||+--------------------- RSSI: report RSSI value as an additional HEX byte after digested data 
+	     ||                       or as a separate byte if Bit 3 is set too. (Decoding see below)
+	     |+---------------------- Report FHT protocol messages (ack, etc)
+	     +----------------------- CUL/CUN: Report raw RSSI data (a==weak ... p==strong signal)
 		                          CUR: Grafic representation: dark==weak ... light == stong signal 
 
 Note:
